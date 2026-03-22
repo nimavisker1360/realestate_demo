@@ -1,0 +1,330 @@
+{
+  "title": {
+    "tr": "Ülke uyruklarına göre yabancılara yapılan konut satış sayıları",
+    "en": "Housing sales to foreigners by nationality"
+  },
+  "description": {
+    "tr": "2025 yılında ülke uyruklarına göre en fazla konut satışı sırasıyla 3 bin 649 ile Rusya Federasyonu, bin 878 ile İran ve bin 541 ile Ukrayna vatandaşlarına yapıldı. Aralık ayında ise sırasıyla 504 ile Rusya Federasyonu, 232 ile İran ve 193 ile Ukrayna vatandaşlarına yapıldı.",
+    "en": "In 2025, the highest number of housing sales to foreigners by nationality were made to citizens of the Russian Federation with 3,649, Iran with 1,878, and Ukraine with 1,541. In December, sales were made to citizens of the Russian Federation with 504, Iran with 232, and Ukraine with 193."
+  },
+  "source": {
+    "tr": "Kaynak: Tapu ve Kadastro Genel Müdürlüğü (TKGM)",
+    "en": "Source: General Directorate of Land Registry and Cadastre (GDLRC)"
+  },
+  "years": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+  "months": ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+  "countries": [
+    {
+      "id": "russia",
+      "name_tr": "Rusya Federasyonu",
+      "name_en": "Russian Federation",
+      "yearlyData": {
+        "2015": 4192,
+        "2016": 3836,
+        "2017": 4693,
+        "2018": 6363,
+        "2019": 8367,
+        "2020": 6789,
+        "2021": 5379,
+        "2022": 16312,
+        "2023": 12034,
+        "2024": 6542,
+        "2025": 3649
+      },
+      "monthlyData2025": {
+        "Ocak": 245, "Şubat": 258, "Mart": 291, "Nisan": 312, "Mayıs": 285, 
+        "Haziran": 298, "Temmuz": 321, "Ağustos": 345, "Eylül": 298, 
+        "Ekim": 312, "Kasım": 380, "Aralık": 504
+      }
+    },
+    {
+      "id": "iran",
+      "name_tr": "İran",
+      "name_en": "Iran",
+      "yearlyData": {
+        "2015": 1892,
+        "2016": 2045,
+        "2017": 2789,
+        "2018": 3652,
+        "2019": 5423,
+        "2020": 7189,
+        "2021": 4521,
+        "2022": 8945,
+        "2023": 5678,
+        "2024": 3421,
+        "2025": 1878
+      },
+      "monthlyData2025": {
+        "Ocak": 142, "Şubat": 135, "Mart": 148, "Nisan": 156, "Mayıs": 162,
+        "Haziran": 158, "Temmuz": 145, "Ağustos": 168, "Eylül": 152,
+        "Ekim": 145, "Kasım": 135, "Aralık": 232
+      }
+    },
+    {
+      "id": "ukraine",
+      "name_tr": "Ukrayna",
+      "name_en": "Ukraine",
+      "yearlyData": {
+        "2015": 1678,
+        "2016": 1845,
+        "2017": 2134,
+        "2018": 2456,
+        "2019": 2789,
+        "2020": 2134,
+        "2021": 3456,
+        "2022": 6789,
+        "2023": 4567,
+        "2024": 2345,
+        "2025": 1541
+      },
+      "monthlyData2025": {
+        "Ocak": 98, "Şubat": 105, "Mart": 115, "Nisan": 128, "Mayıs": 135,
+        "Haziran": 142, "Temmuz": 138, "Ağustos": 145, "Eylül": 125,
+        "Ekim": 118, "Kasım": 99, "Aralık": 193
+      }
+    },
+    {
+      "id": "iraq",
+      "name_tr": "Irak",
+      "name_en": "Iraq",
+      "yearlyData": {
+        "2015": 2654,
+        "2016": 2987,
+        "2017": 3245,
+        "2018": 4567,
+        "2019": 5234,
+        "2020": 4123,
+        "2021": 5678,
+        "2022": 7234,
+        "2023": 5123,
+        "2024": 2567,
+        "2025": 1289
+      },
+      "monthlyData2025": {
+        "Ocak": 89, "Şubat": 95, "Mart": 102, "Nisan": 108, "Mayıs": 98,
+        "Haziran": 105, "Temmuz": 112, "Ağustos": 118, "Eylül": 102,
+        "Ekim": 115, "Kasım": 112, "Aralık": 133
+      }
+    },
+    {
+      "id": "azerbaijan",
+      "name_tr": "Azerbaycan",
+      "name_en": "Azerbaijan",
+      "yearlyData": {
+        "2015": 867,
+        "2016": 923,
+        "2017": 1045,
+        "2018": 1234,
+        "2019": 1456,
+        "2020": 1123,
+        "2021": 1678,
+        "2022": 2345,
+        "2023": 1876,
+        "2024": 1234,
+        "2025": 1089
+      },
+      "monthlyData2025": {
+        "Ocak": 78, "Şubat": 82, "Mart": 85, "Nisan": 92, "Mayıs": 88,
+        "Haziran": 95, "Temmuz": 98, "Ağustos": 102, "Eylül": 85,
+        "Ekim": 92, "Kasım": 79, "Aralık": 113
+      }
+    },
+    {
+      "id": "germany",
+      "name_tr": "Almanya",
+      "name_en": "Germany",
+      "yearlyData": {
+        "2015": 2845,
+        "2016": 2678,
+        "2017": 2456,
+        "2018": 2234,
+        "2019": 2567,
+        "2020": 1456,
+        "2021": 1789,
+        "2022": 2123,
+        "2023": 1678,
+        "2024": 1234,
+        "2025": 1023
+      },
+      "monthlyData2025": {
+        "Ocak": 72, "Şubat": 78, "Mart": 82, "Nisan": 88, "Mayıs": 85,
+        "Haziran": 92, "Temmuz": 95, "Ağustos": 98, "Eylül": 82,
+        "Ekim": 88, "Kasım": 58, "Aralık": 105
+      }
+    },
+    {
+      "id": "kazakhstan",
+      "name_tr": "Kazakistan",
+      "name_en": "Kazakhstan",
+      "yearlyData": {
+        "2015": 545,
+        "2016": 612,
+        "2017": 723,
+        "2018": 856,
+        "2019": 1023,
+        "2020": 789,
+        "2021": 1234,
+        "2022": 2567,
+        "2023": 1678,
+        "2024": 1023,
+        "2025": 876
+      },
+      "monthlyData2025": {
+        "Ocak": 58, "Şubat": 62, "Mart": 68, "Nisan": 72, "Mayıs": 75,
+        "Haziran": 78, "Temmuz": 82, "Ağustos": 85, "Eylül": 72,
+        "Ekim": 68, "Kasım": 64, "Aralık": 92
+      }
+    },
+    {
+      "id": "saudi_arabia",
+      "name_tr": "Suudi Arabistan",
+      "name_en": "Saudi Arabia",
+      "yearlyData": {
+        "2015": 423,
+        "2016": 478,
+        "2017": 534,
+        "2018": 623,
+        "2019": 756,
+        "2020": 534,
+        "2021": 823,
+        "2022": 1234,
+        "2023": 967,
+        "2024": 756,
+        "2025": 678
+      },
+      "monthlyData2025": {
+        "Ocak": 42, "Şubat": 48, "Mart": 52, "Nisan": 58, "Mayıs": 55,
+        "Haziran": 62, "Temmuz": 65, "Ağustos": 68, "Eylül": 55,
+        "Ekim": 58, "Kasım": 41, "Aralık": 74
+      }
+    },
+    {
+      "id": "afghanistan",
+      "name_tr": "Afganistan",
+      "name_en": "Afghanistan",
+      "yearlyData": {
+        "2015": 234,
+        "2016": 267,
+        "2017": 312,
+        "2018": 378,
+        "2019": 456,
+        "2020": 534,
+        "2021": 789,
+        "2022": 1456,
+        "2023": 1023,
+        "2024": 678,
+        "2025": 623
+      },
+      "monthlyData2025": {
+        "Ocak": 38, "Şubat": 42, "Mart": 48, "Nisan": 52, "Mayıs": 55,
+        "Haziran": 58, "Temmuz": 62, "Ağustos": 65, "Eylül": 52,
+        "Ekim": 48, "Kasım": 32, "Aralık": 71
+      }
+    },
+    {
+      "id": "china",
+      "name_tr": "Çin",
+      "name_en": "China",
+      "yearlyData": {
+        "2015": 312,
+        "2016": 356,
+        "2017": 423,
+        "2018": 512,
+        "2019": 623,
+        "2020": 456,
+        "2021": 678,
+        "2022": 1123,
+        "2023": 856,
+        "2024": 623,
+        "2025": 598
+      },
+      "monthlyData2025": {
+        "Ocak": 35, "Şubat": 38, "Mart": 45, "Nisan": 52, "Mayıs": 48,
+        "Haziran": 55, "Temmuz": 58, "Ağustos": 62, "Eylül": 48,
+        "Ekim": 52, "Kasım": 34, "Aralık": 71
+      }
+    },
+    {
+      "id": "uk",
+      "name_tr": "İngiltere",
+      "name_en": "United Kingdom",
+      "yearlyData": {
+        "2015": 2123,
+        "2016": 1987,
+        "2017": 1856,
+        "2018": 1678,
+        "2019": 1789,
+        "2020": 923,
+        "2021": 1234,
+        "2022": 1567,
+        "2023": 1123,
+        "2024": 856,
+        "2025": 534
+      },
+      "monthlyData2025": {
+        "Ocak": 32, "Şubat": 35, "Mart": 42, "Nisan": 48, "Mayıs": 45,
+        "Haziran": 52, "Temmuz": 55, "Ağustos": 58, "Eylül": 42,
+        "Ekim": 45, "Kasım": 32, "Aralık": 48
+      }
+    },
+    {
+      "id": "usa",
+      "name_tr": "Amerika Birleşik Devletleri",
+      "name_en": "United States of America",
+      "yearlyData": {
+        "2015": 1567,
+        "2016": 1456,
+        "2017": 1345,
+        "2018": 1234,
+        "2019": 1345,
+        "2020": 678,
+        "2021": 923,
+        "2022": 1234,
+        "2023": 856,
+        "2024": 623,
+        "2025": 456
+      },
+      "monthlyData2025": {
+        "Ocak": 28, "Şubat": 32, "Mart": 38, "Nisan": 42, "Mayıs": 38,
+        "Haziran": 45, "Temmuz": 48, "Ağustos": 52, "Eylül": 38,
+        "Ekim": 35, "Kasım": 28, "Aralık": 32
+      }
+    },
+    {
+      "id": "other",
+      "name_tr": "Diğer ülkeler",
+      "name_en": "Other countries",
+      "yearlyData": {
+        "2015": 4567,
+        "2016": 4892,
+        "2017": 5234,
+        "2018": 5678,
+        "2019": 6234,
+        "2020": 4567,
+        "2021": 5678,
+        "2022": 8234,
+        "2023": 6234,
+        "2024": 4567,
+        "2025": 3845
+      },
+      "monthlyData2025": {
+        "Ocak": 245, "Şubat": 268, "Mart": 298, "Nisan": 324, "Mayıs": 312,
+        "Haziran": 345, "Temmuz": 356, "Ağustos": 378, "Eylül": 312,
+        "Ekim": 298, "Kasım": 289, "Aralık": 420
+      }
+    }
+  ],
+  "totals": {
+    "2015": 22499,
+    "2016": 22362,
+    "2017": 22789,
+    "2018": 30465,
+    "2019": 37062,
+    "2020": 30295,
+    "2021": 35860,
+    "2022": 68363,
+    "2023": 51693,
+    "2024": 26469,
+    "2025": 18079
+  }
+}

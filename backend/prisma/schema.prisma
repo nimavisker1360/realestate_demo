@@ -1,0 +1,281 @@
+generator client {
+    provider = "prisma-client-js"
+}
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    name String?
+    email String @unique
+    image String?
+    phone String?
+    address String?
+    profileComplete Boolean @default(false)
+    isAdmin Boolean @default(false)
+    bookedVisits Json[]
+    favResidenciesID String[] @db.ObjectId
+  
+    ownedResidencies Residency[] @relation("Owner") 
+  
+    createdAt DateTime? @default(now())
+    updatedAt DateTime? @updatedAt
+}
+model Residency {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    title String
+    description String?
+    description_en String?
+    description_tr String?
+    description_ru String?
+    price Int
+    currency String @default("USD")
+    address String?
+    addressDetails Json? // { city, district, neighborhood }
+    city String?
+    country String?
+    image String?
+    images String[]
+    videos String[]
+    facilities Json?
+    propertyType String @default("sale") // "sale" or "rent"
+    category String @default("residential") // residential, commercial, land, building, timeshare, tourist-facility
+    
+    // Turkish real estate fields
+    listingNo String?
+    listingDate DateTime?
+    area Json? // { gross, net }
+    rooms String?
+    buildingAge Int?
+    floor Int?
+    totalFloors Int?
+    heating String?
+    bathrooms Int?
+    kitchen String?
+    balcony Boolean?
+    elevator Boolean?
+    parking String?
+    furnished Boolean?
+    usageStatus String?
+    siteName String?
+    dues Int?
+    mortgageEligible Boolean?
+    deedStatus String?
+    
+    // Property Features
+    interiorFeatures String[] // İç Özellikler
+    exteriorFeatures String[] // Dış Özellikler
+    muhitFeatures String[] // Muhit (Neighborhood)
+    
+    // Land/Arsa Features
+    imarDurumu String? // İmar Durumu (Zoning Status)
+    altyapiFeatures String[] // Altyapı (Infrastructure)
+    konumFeatures String[] // Konum (Location)
+    genelOzellikler String[] // Genel Özellikler (General Features)
+    manzaraFeatures String[] // Manzara (View)
+    
+    // Yurt İçi Proje (Local Project) specific fields
+    projectName String? // Proje adı (Project name)
+    ilanNo String? // İlan numarası (Listing number for projects)
+    kampanya String? // Kampanya bilgisi
+    deliveryDate String? // Teslim tarihi
+    projectStatus String? // Proje durumu
+    mapImage String? // Harita görseli URL
+    projeHakkinda Json? // { projeAlani, yesilAlan, konutSayisi, aciklama, description }
+    dairePlanlari Json? // Array of { tip, fiyatMin, fiyatMax, images, image }
+    vaziyetPlani String? // Site plan image URL
+    iletisim Json? // { telefonlar[], satisOfisiAdresi, webSitesi, calismaSaatleri, koordinatlar }
+    ozellikler Json? // { binaOzellikleri, disOzellikler, engelliUygun, eglenceAlisveris, guvenlik, manzara, muhit }
+    
+    userEmail String?
+    owner User? @relation("Owner",fields: [userEmail],references: [email])
+    
+    consultantId String? @db.ObjectId
+    consultant Consultant? @relation(fields: [consultantId], references: [id])
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Consultant {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    name String
+    title String
+    title_en String?
+    title_tr String?
+    specialty String
+    specialty_en String?
+    specialty_tr String?
+    experience String
+    languages String[]
+    rating Float @default(5.0)
+    reviews Int @default(0)
+    deals Int @default(0)
+    phone String
+    whatsapp String
+    email String
+    linkedin String?
+    image String
+    bio String
+    bio_en String?
+    bio_tr String?
+    available Boolean @default(true)
+    order Int @default(0)
+    
+    residencies Residency[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model ContactMessage {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    name String?
+    email String?
+    phone String?
+    subject String?
+    message String
+    propertyId String?
+    propertyTitle String?
+    consultantId String?
+    consultantName String?
+    consultantEmail String?
+    gclid String?
+    gbraid String?
+    wbraid String?
+    utmSource String? @map("utm_source")
+    utmMedium String? @map("utm_medium")
+    utmCampaign String? @map("utm_campaign")
+    utmTerm String? @map("utm_term")
+    utmContent String? @map("utm_content")
+    landingPage String? @map("landing_page")
+    referrer String?
+    leadStatus String? @default("new") @map("lead_status")
+    leadSource String? @default("form") @map("lead_source")
+    preferredContactMethod String? @map("preferred_contact_method")
+    preferredLanguage String? @map("preferred_language")
+    nationality String?
+    budgetMin Float? @map("budget_min")
+    budgetMax Float? @map("budget_max")
+    budgetNotes String? @map("budget_notes")
+    currency String?
+    purpose String?
+    locationInterest String? @map("location_interest")
+    cityInterest String? @map("city_interest")
+    districtInterest String? @map("district_interest")
+    projectInterest String? @map("project_interest")
+    propertyTypeInterest String? @map("property_type_interest")
+    roomType String? @map("room_type")
+    paymentPlan String? @map("payment_plan")
+    timeline String?
+    citizenshipInterest Boolean? @map("citizenship_interest")
+    consultationMode String? @map("consultation_mode")
+    aiSessionId String? @map("ai_session_id")
+    aiStage String? @map("ai_stage")
+    aiQualifiedAt DateTime? @map("ai_qualified_at")
+    leadScore Int? @default(0) @map("lead_score")
+    leadTemperature String? @map("lead_temperature")
+    sourcePage String? @map("source_page")
+    pageType String? @map("page_type")
+    assignedAgent String? @map("assigned_agent")
+    transcript Json?
+    extractedAnswers Json? @map("extracted_answers")
+    recommendations Json?
+    campaignData Json? @map("campaign_data")
+    crmPayload Json? @map("crm_payload")
+    handoffSummary String? @map("handoff_summary")
+    submittedAt DateTime? @default(now()) @map("submitted_at")
+    googleAdsQualifiedUploadedAt DateTime? @map("google_ads_qualified_uploaded_at")
+    googleAdsQualifiedRequestId String? @map("google_ads_qualified_request_id")
+    googleAdsQualifiedJobId String? @map("google_ads_qualified_job_id")
+    googleAdsQualifiedUploadError String? @map("google_ads_qualified_upload_error")
+    read Boolean @default(false)
+    
+    createdAt DateTime @default(now())
+}
+
+model Blog {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    title String
+    title_en String?
+    title_tr String?
+    title_ru String?
+    slug String? // SEO-friendly URL slug (will be unique after migration)
+    menuKey String? // Optional key to link blog to About Turkey menu items
+    category String
+    category_en String?
+    category_tr String?
+    category_ru String?
+    country String?
+    content String
+    content_en String?
+    content_tr String?
+    content_ru String?
+    summary String?
+    summary_en String?
+    summary_tr String?
+    summary_ru String?
+    metaDescription String? // SEO meta description (max 160 chars)
+    metaDescription_en String?
+    metaDescription_tr String?
+    metaDescription_ru String?
+    image String?
+    video String?
+    images String[] // Multiple images for blog gallery
+    published Boolean @default(true)
+    order Int @default(0)
+    
+    // SEO and structured content
+    faqSection Json? // Array of {question, answer} objects
+    faqSection_en Json? // English FAQ
+    faqSection_tr Json? // Turkish FAQ
+    faqSection_ru Json? // Russian FAQ
+    internalLinks String[] // Suggested internal links
+    
+    // Market data used for generation
+    marketData Json? // Stores the input data used to generate the blog
+    
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@unique([slug])
+}
+
+model Testimonial {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    name String
+    role String?
+    company String?
+    image String?
+    rating Int @default(5)
+    comment String
+    comment_en String?
+    comment_tr String?
+    staffBehavior String?
+    published Boolean @default(true)
+    order Int @default(0)
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model HousingSales {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    year Int
+    province String // İl
+    district String // İlçe
+    totalSales Int // Toplam
+    mortgagedSales Int // İpotekli satış
+    otherSales Int // Diğer satış
+    firstHandSales Int // İlk el satış
+    secondHandSales Int // İkinci el satış
+    
+    createdAt DateTime @default(now())
+    
+    @@unique([year, province, district])
+    @@index([year])
+    @@index([province])
+    @@index([district])
+}

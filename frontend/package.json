@@ -5,11 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "sitemap": "tsx scripts/generate-sitemap.ts",
-    "prerender": "node scripts/prerender.js",
-    "prebuild": "npm run sitemap",
     "build": "vite build",
-    "postbuild": "npm run prerender",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

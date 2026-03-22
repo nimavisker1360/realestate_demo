@@ -12,7 +12,6 @@ import { assistantRoute } from "./routes/assistantRoute.js";
 import { marketRoute } from "./routes/marketRoute.js";
 import { aiSalesAgentRoute } from "./routes/aiSalesAgentRoute.js";
 import { uploadRoute } from "./routes/uploadRoute.js";
-import { getSitemapXml } from "./controllers/sitemapCntrl.js";
 import { loadBackendEnv } from "./config/loadEnv.js";
 
 loadBackendEnv();
@@ -22,10 +21,6 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
-
-// Dynamic XML sitemap (served via Vercel rewrite from /sitemap.xml).
-app.get("/sitemap.xml", getSitemapXml);
-app.get("/api/sitemap.xml", getSitemapXml);
 
 // Routes
 app.use("/api/user", userRoute);

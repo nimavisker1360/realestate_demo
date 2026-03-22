@@ -4,7 +4,7 @@ import {
   stripLanguageFromPath,
 } from "./languageRouting";
 
-export const SITE_URL = "https://demo.example";
+export const SITE_URL = "https://www.hbrealstate.com";
 export const SUPPORTED_SEO_LANGS = SUPPORTED_LANGUAGE_CODES;
 
 export const DEFAULT_SEO = {

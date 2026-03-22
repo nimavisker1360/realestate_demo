@@ -21,7 +21,7 @@ const ListingSeoPage = () => {
       <SEO
         title={title}
         description={description}
-        canonical="https://demo.example/listing"
+        canonical="https://www.hbrealstate.com/listing"
       />
       <Listing />
     </>

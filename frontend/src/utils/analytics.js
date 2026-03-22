@@ -22,7 +22,7 @@ export const isWhatsAppUrl = (value = "") => {
     const baseUrl =
       typeof window !== "undefined" && window.location?.origin
         ? window.location.origin
-        : "https://demo.example";
+        : "https://www.hbrealstate.com";
     const parsedUrl = new URL(normalizedValue, baseUrl);
 
     return (

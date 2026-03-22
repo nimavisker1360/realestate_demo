@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "sitemap": "npx tsx scripts/generate-sitemap.ts",
+    "sitemap": "tsx scripts/generate-sitemap.ts",
     "prerender": "node scripts/prerender.js",
     "prebuild": "npm run sitemap",
     "build": "vite build",

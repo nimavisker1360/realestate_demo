@@ -33,7 +33,7 @@ const getBaseOrigin = () => {
     return window.location.origin;
   }
 
-  return "https://demo.example";
+  return "https://www.hbrealstate.com";
 };
 
 const getCurrentLocationHref = () => {

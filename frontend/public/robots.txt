@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://demo.example/sitemap.xml
+Sitemap: https://www.hbrealstate.com/sitemap.xml

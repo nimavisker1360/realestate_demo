@@ -45,7 +45,7 @@ interface SitemapUrl {
   priority?: string;
 }
 
-const SITE_URL = "https://demo.example";
+const SITE_URL = "https://www.hbrealstate.com";
 const rawApiBase =
   process.env.SITEMAP_API_URL ||
   process.env.VITE_API_URL ||

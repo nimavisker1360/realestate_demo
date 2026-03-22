@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const SITE_URL = "https://demo.example";
+const SITE_URL = "https://www.hbrealstate.com";
 const API_BASE = process.env.SITEMAP_API_URL || `${SITE_URL}/api`;
 const ENABLE_REACT_SNAP = process.env.ENABLE_REACT_SNAP === "1";
 const parsedLimit = Number(process.env.PRERENDER_PROPERTY_LIMIT || 0);
